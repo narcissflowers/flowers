@@ -73,34 +73,81 @@
 
 
 
- 
-<section class="reviews-section">
-    <div class="reviews-simple">
-        <div class="reviews-wrapper" id="reviewsWrapper">
-            <img src="images/review1.jpg" alt="Відгук 1">
-            <img src="images/review2.jpg" alt="Відгук 2">
-            <img src="images/review3.jpg" alt="Відгук 3">
-            <img src="images/review4.jpg" alt="Відгук 4">
-            <img src="images/review5.jpg" alt="Відгук 5">
-            <img src="images/review6.jpg" alt="Відгук 6">
-            <img src="images/review7.jpg" alt="Відгук 7">
-            <img src="images/review8.jpg" alt="Відгук 8">
-            <img src="images/review9.jpg" alt="Відгук 9">
-            <img src="images/review10.jpg" alt="Відгук 10">
-            <img src="images/review11.jpg" alt="Відгук 11">
-            <img src="images/review12.jpg" alt="Відгук 12">
-            <img src="images/review13.jpg" alt="Відгук 13">
-            <img src="images/review14.jpg" alt="Відгук 14">
-            <img src="images/review15.jpg" alt="Відгук 15">
-            <img src="images/review16.jpg" alt="Відгук 16">
-            <img src="images/review17.jpg" alt="Відгук 17">
-        </div>
+<section class="reviews-section mobile-only">
+            <div class="reviews-simple">
+<img src="images/review1.jpg" alt="Відгук 1">
+<img src="images/review2.jpg" alt="Відгук 2">
+<img src="images/review3.jpg" alt="Відгук 3">
+<img src="images/review4.jpg" alt="Відгук 4">
+<img src="images/review5.jpg" alt="Відгук 5">
+<img src="images/review6.jpg" alt="Відгук 6">
+<img src="images/review7.jpg" alt="Відгук 7">
+<img src="images/review8.jpg" alt="Відгук 8">
+<img src="images/review9.jpg" alt="Відгук 9">
+<img src="images/review10.jpg" alt="Відгук 10">
+<img src="images/review11.jpg" alt="Відгук 11">
+<img src="images/review12.jpg" alt="Відгук 12">
+<img src="images/review13.jpg" alt="Відгук 13">
+<img src="images/review14.jpg" alt="Відгук 14">
+<img src="images/review15.jpg" alt="Відгук 15">
+<img src="images/review16.jpg" alt="Відгук 16">
+<img src="images/review17.jpg" alt="Відгук 17">
+            </div>
+        </section>
 
-        <!-- Стрелки (только на десктопе) -->
-        <button class="review-nav review-prev" aria-label="Назад">‹</button>
-        <button class="review-nav review-next" aria-label="Вперед">›</button>
+
+
     </div>
 </section>
+
+
+<section class="reviews-section desktop-only">
+    <div class="reviews-simple">
+        <button class="review-nav review-prev">‹</button>
+        <button class="review-nav review-next">›</button>
+
+        <div class="reviews-wrapper">
+<img src="images/review1.jpg" alt="Відгук 1">
+<img src="images/review2.jpg" alt="Відгук 2">
+<img src="images/review3.jpg" alt="Відгук 3">
+<img src="images/review4.jpg" alt="Відгук 4">
+<img src="images/review5.jpg" alt="Відгук 5">
+<img src="images/review6.jpg" alt="Відгук 6">
+<img src="images/review7.jpg" alt="Відгук 7">
+<img src="images/review8.jpg" alt="Відгук 8">
+<img src="images/review9.jpg" alt="Відгук 9">
+<img src="images/review10.jpg" alt="Відгук 10">
+<img src="images/review11.jpg" alt="Відгук 11">
+<img src="images/review12.jpg" alt="Відгук 12">
+<img src="images/review13.jpg" alt="Відгук 13">
+<img src="images/review14.jpg" alt="Відгук 14">
+<img src="images/review15.jpg" alt="Відгук 15">
+<img src="images/review16.jpg" alt="Відгук 16">
+<img src="images/review17.jpg" alt="Відгук 17">
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector(".desktop-only .reviews-wrapper");
+    const prev = document.querySelector(".review-prev");
+    const next = document.querySelector(".review-next");
+
+    let offset = 0;
+    const step = 720; // примерно ширина одной карточки включая gap
+
+    prev.onclick = () => {
+        offset += step;
+        wrapper.style.transform = `translateX(${offset}px)`;
+    };
+
+    next.onclick = () => {
+        offset -= step;
+        wrapper.style.transform = `translateX(${offset}px)`;
+    };
+});
+</script>
 
 
 <section id="delivery" class="delivery-section">
@@ -316,46 +363,9 @@ function scrollToTop() {
 </script>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth < 768) return; // на мобиле не трогаем
-
-    const wrapper = document.getElementById('reviewsWrapper');
-    const prevBtn = document.querySelector('.review-prev');
-    const nextBtn = document.querySelector('.review-next');
-    let currentIndex = 0;
-    const cardsToShow = 3;
-    const totalCards = wrapper.children.length;
-
-    const updateCarousel = () => {
-        const offset = -currentIndex * (wrapper.children[0].offsetWidth + 36);
-        wrapper.style.transform = `translateX(${offset}px)`;
-    };
-
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < totalCards - cardsToShow) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // зацикливаем
-        }
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalCards - cardsToShow;
-        }
-        updateCarousel();
-    });
 
 
 
-    // Пересчитываем при ресайзе
-    window.addEventListener('resize', updateCarousel);
-});
-</script>
 </body>
 
 </html>

@@ -303,22 +303,67 @@ h1 {
 
 
 
+/* =========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================= */
+
+/* Показываем мобильный блок, скрываем десктоп */
+.mobile-only { display: block; }
+.desktop-only { display: none; }
+
+/* горизонтальная мобильная карусель — ТВОЯ ОРИГИНАЛЬНАЯ */
+.mobile-only .reviews-simple {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    background: #0b2d2a;
+}
+
+.mobile-only .reviews-simple::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-only .reviews-simple img {
+    height: 520px;
+    width: auto;
+    max-width: 88vw;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: white;
+    border-radius: 26px;
+    scroll-snap-align: start;
+}
 
 
 
+/* =========================
+   ДЕСКТОПНАЯ ВЕРСИЯ
+   ========================= */
 @media (min-width: 768px) {
-    .reviews-simple {
+
+    /* отключаем мобильную часть */
+    .mobile-only { display: none !important; }
+
+    /* включаем десктопную */
+    .desktop-only { display: block !important; }
+
+    .desktop-only .reviews-simple {
         position: relative;
         overflow: hidden;
         padding: 0 80px;
         max-width: 1600px;
         margin: 0 auto;
-        background: #0b2d2a; /* чётко задаём фон — убираем любые просветы */
+        background: #0b2d2a;
     }
 
-    /* УБИРАЕМ ОСВЕТЛЕНИЕ — только тень слева и справа */
-    .reviews-simple::before,
-    .reviews-simple::after {
+    /* затемнение по бокам */
+    .desktop-only .reviews-simple::before,
+    .desktop-only .reviews-simple::after {
         content: '';
         position: absolute;
         top: 0; bottom: 0;
@@ -326,23 +371,25 @@ h1 {
         z-index: 3;
         pointer-events: none;
     }
-    .reviews-simple::before {
+
+    .desktop-only .reviews-simple::before {
         left: 0;
         background: linear-gradient(to right, #0b2d2a 30%, transparent 100%);
     }
-    .reviews-simple::after {
+
+    .desktop-only .reviews-simple::after {
         right: 0;
         background: linear-gradient(to left, #0b2d2a 30%, transparent 100%);
     }
 
-    .reviews-wrapper {
+    .desktop-only .reviews-wrapper {
         display: flex;
         gap: 36px;
         transition: transform 0.8s cubic-bezier(0.77, 0, 0.18, 1);
         will-change: transform;
     }
 
-    .reviews-simple img {
+    .desktop-only img {
         height: 660px;
         width: auto;
         flex-shrink: 0;
@@ -352,13 +399,13 @@ h1 {
         transition: all 0.7s ease;
     }
 
-    .reviews-simple img:hover {
+    .desktop-only img:hover {
         transform: translateY(-20px);
         box-shadow: 0 50px 100px rgba(0,0,0,0.6),
                     0 0 0 4px rgba(212,175,55,0.25);
     }
 
-    /* Стрелки — теперь на тёмном фоне, без просвета */
+    /* стрелки */
     .review-nav {
         position: absolute;
         top: 50%;
@@ -370,7 +417,6 @@ h1 {
         border-radius: 50%;
         color: #d4af37;
         font-size: 28px;
-        font-weight: 300;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -379,15 +425,19 @@ h1 {
         transition: all 0.4s ease;
         backdrop-filter: blur(8px);
     }
+
     .review-nav:hover {
         background: #d4af37;
         color: #0b2d2a;
         transform: translateY(-50%) scale(1.15);
         box-shadow: 0 0 30px rgba(212,175,55,0.4);
     }
+
     .review-prev { left: 20px; }
     .review-next { right: 20px; }
 }
+
+
 
 
 

@@ -303,15 +303,21 @@ h1 {
 
 
 
-/* =========================
+
+
+/* По умолчанию — мобильная версия активна */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* ================================================================
    МОБИЛЬНАЯ ВЕРСИЯ
-   ========================= */
+   ================================================================ */
 
-/* Показываем мобильный блок, скрываем десктоп */
-.mobile-only { display: block; }
-.desktop-only { display: none; }
-
-/* горизонтальная мобильная карусель — ТВОЯ ОРИГИНАЛЬНАЯ */
 .mobile-only .reviews-simple {
     display: flex;
     gap: 14px;
@@ -322,6 +328,10 @@ h1 {
     scroll-snap-type: x mandatory;
     scroll-padding-left: 20px;
     background: #0b2d2a;
+    width: 100vw;
+    max-width: 100vw;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .mobile-only .reviews-simple::-webkit-scrollbar {
@@ -341,16 +351,20 @@ h1 {
 
 
 
-/* =========================
-   ДЕСКТОПНАЯ ВЕРСИЯ
-   ========================= */
+/* ================================================================
+   ДЕСКТОП — С 768PX И ВЫШЕ
+   ================================================================ */
+
 @media (min-width: 768px) {
 
-    /* отключаем мобильную часть */
-    .mobile-only { display: none !important; }
+    /* Важнейшая часть — изоляция */
+    .mobile-only {
+        display: none !important;
+    }
 
-    /* включаем десктопную */
-    .desktop-only { display: block !important; }
+    .desktop-only {
+        display: block !important;
+    }
 
     .desktop-only .reviews-simple {
         position: relative;
@@ -358,15 +372,16 @@ h1 {
         padding: 0 80px;
         max-width: 1600px;
         margin: 0 auto;
-        background: #0b2d2a;
+
     }
 
-    /* затемнение по бокам */
+    /* затемнение */
     .desktop-only .reviews-simple::before,
     .desktop-only .reviews-simple::after {
         content: '';
         position: absolute;
-        top: 0; bottom: 0;
+        top: 0;
+        bottom: 0;
         width: 120px;
         z-index: 3;
         pointer-events: none;
@@ -390,7 +405,7 @@ h1 {
     }
 
     .desktop-only img {
-        height: 660px;
+        height: 550px;
         width: auto;
         flex-shrink: 0;
         object-fit: cover;
@@ -423,7 +438,7 @@ h1 {
         cursor: pointer;
         z-index: 10;
         transition: all 0.4s ease;
-        backdrop-filter: blur(8px);
+
     }
 
     .review-nav:hover {
@@ -433,9 +448,15 @@ h1 {
         box-shadow: 0 0 30px rgba(212,175,55,0.4);
     }
 
-    .review-prev { left: 20px; }
-    .review-next { right: 20px; }
+    .review-prev {
+        left: 20px;
+    }
+
+    .review-next {
+        right: 20px;
+    }
 }
+
 
 
 
@@ -688,8 +709,6 @@ h1 {
     .footer-copyright { font-size: 15px; }
     .to-top-btn svg { width: 64px; height: 64px; }
 }
-
-
 
 
 

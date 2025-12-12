@@ -478,7 +478,7 @@ h1 {
 }
 
 .delivery-card {
-    flex: 1 1 280px;
+    flex: 1 1 180px;
     max-width: 320px;
     text-align: center;
     opacity: 0;

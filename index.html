@@ -31,7 +31,7 @@
 
 
     <ul class="mobile-menu-list">
-        <li data-delay="0"><a href="https://prokopenkovdmitr.github.io/flowers/">В початок</a></li>
+        <li data-delay="0"><a href="/">В початок</a></li>
         <li data-delay="100"><a href="#reviews">Відгуки</a></li>
         <li data-delay="200"><a href="#delivery">Доставка</a></li>
         <li data-delay="300"><a href="#contacts">Контакти</a></li>
@@ -97,8 +97,6 @@
 
 
 
-    </div>
-</section>
 
 
 <section class="reviews-section desktop-only">
@@ -128,26 +126,7 @@
     </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const wrapper = document.querySelector(".desktop-only .reviews-wrapper");
-    const prev = document.querySelector(".review-prev");
-    const next = document.querySelector(".review-next");
 
-    let offset = 0;
-    const step = 720; // примерно ширина одной карточки включая gap
-
-    prev.onclick = () => {
-        offset += step;
-        wrapper.style.transform = `translateX(${offset}px)`;
-    };
-
-    next.onclick = () => {
-        offset -= step;
-        wrapper.style.transform = `translateX(${offset}px)`;
-    };
-});
-</script>
 
 
 <section id="delivery" class="delivery-section">
@@ -363,7 +342,51 @@ function scrollToTop() {
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector(".desktop-only .reviews-wrapper");
+    if (!wrapper) return; // если нет — ничего не делаем (на мобайле)
 
+    const prev = document.querySelector(".review-prev");
+    const next = document.querySelector(".review-next");
+
+    let index = 0;
+    const cardsVisible = 3; // сколько карточек видно одновременно
+    const totalCards = wrapper.children.length;
+
+    const updateCarousel = () => {
+        const cardWidth = wrapper.children[0].getBoundingClientRect().width + 36; // ширина + gap
+        wrapper.style.transform = `translateX(-${index * cardWidth}px)`;
+    };
+
+    next.onclick = () => {
+        if (index < totalCards - cardsVisible) {
+            index++;
+        } else {
+            index = 0; // зацикливаем
+        }
+        updateCarousel();
+    };
+
+    prev.onclick = () => {
+        if (index > 0) {
+            index--;
+        } else {
+            index = totalCards - cardsVisible; // зацикливаем назад
+        }
+        updateCarousel();
+    };
+
+    // Пересчёт при ресайзе
+    window.addEventListener("resize", () => {
+        index = Math.min(index, totalCards - cardsVisible);
+        updateCarousel();
+    });
+
+    // Инициализация
+    updateCarousel();
+});
+</script>
 
 
 </body>

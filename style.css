@@ -357,7 +357,6 @@ h1 {
 
 @media (min-width: 768px) {
 
-    /* Важнейшая часть — изоляция */
     .mobile-only {
         display: none !important;
     }
@@ -366,36 +365,46 @@ h1 {
         display: block !important;
     }
 
+
+    .reviews-section {
+        position: relative;
+        width: 100%;
+    }
+
+
     .desktop-only .reviews-simple {
         position: relative;
         overflow: hidden;
-        padding: 0 80px;
+
         max-width: 1600px;
         margin: 0 auto;
 
+        padding-left: clamp(24px, 5vw, 80px);
+        padding-right: clamp(24px, 5vw, 80px);
     }
 
-    /* затемнение */
+
     .desktop-only .reviews-simple::before,
     .desktop-only .reviews-simple::after {
         content: '';
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 120px;
+        width: clamp(60px, 10vw, 140px);
         z-index: 3;
         pointer-events: none;
     }
 
     .desktop-only .reviews-simple::before {
         left: 0;
-        background: linear-gradient(to right, #0b2d2a 30%, transparent 100%);
+        background: linear-gradient(to right, #0b2d2a 40%, transparent 100%);
     }
 
     .desktop-only .reviews-simple::after {
         right: 0;
-        background: linear-gradient(to left, #0b2d2a 30%, transparent 100%);
+    
     }
+
 
     .desktop-only .reviews-wrapper {
         display: flex;
@@ -416,29 +425,34 @@ h1 {
 
     .desktop-only img:hover {
         transform: translateY(-20px);
-        box-shadow: 0 50px 100px rgba(0,0,0,0.6),
-                    0 0 0 4px rgba(212,175,55,0.25);
+        box-shadow:
+            0 50px 100px rgba(0,0,0,0.6),
+            0 0 0 4px rgba(212,175,55,0.25);
     }
 
-    /* стрелки */
     .review-nav {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 56px;
-        height: 56px;
+        z-index: 10;
+
+        width: clamp(48px, 4vw, 64px);
+        height: clamp(48px, 4vw, 64px);
+
         background: rgba(11, 45, 42, 0.92);
         border: 2px solid #d4af37;
         border-radius: 50%;
         color: #d4af37;
-        font-size: 28px;
+
+        font-size: clamp(22px, 3vw, 32px);
+
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        z-index: 10;
-        transition: all 0.4s ease;
 
+        cursor: pointer;
+        transition: all 0.35s ease;
+        backdrop-filter: blur(6px);
     }
 
     .review-nav:hover {
@@ -448,14 +462,35 @@ h1 {
         box-shadow: 0 0 30px rgba(212,175,55,0.4);
     }
 
+
     .review-prev {
-        left: 20px;
+        left: max(12px, calc((100vw - 1600px) / 2));
     }
 
     .review-next {
-        right: 20px;
+        right: max(12px, calc((100vw - 1600px) / 2));
+    }
+
+
+    @media (max-width: 1100px) {
+        .review-prev {
+            left: 12px;
+        }
+        .review-next {
+            right: 12px;
+        }
+
+        .review-nav {
+            width: 52px;
+            height: 52px;
+            font-size: 26px;
+        }
     }
 }
+
+
+
+
 
 
 

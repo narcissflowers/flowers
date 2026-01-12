@@ -112,9 +112,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <section class="reviews-section desktop-only">
+
+
+
     <div class="reviews-simple">
-        <button class="review-nav review-prev">‹</button>
-        <button class="review-nav review-next">›</button>
+    	<button class="review-nav review-prev">‹</button>
+    	<button class="review-nav review-next">›</button>
+
 
         <div class="reviews-wrapper">
 <img src="images/review1.jpg" alt="Відгук 1">
@@ -365,7 +369,7 @@ function scrollToTop() {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.querySelector(".desktop-only .reviews-wrapper");
-    if (!wrapper) return; // если нет — ничего не делаем (на мобайле)
+    if (!wrapper) return;
 
     const prev = document.querySelector(".review-prev");
     const next = document.querySelector(".review-next");

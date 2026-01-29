@@ -1,422 +1,915 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narciss Flowers – Доставка свіжих квітів Дніпро</title>
-    <meta name="description" content="Доставка свіжих квітів та авторських букетів по Дніпру. Нарциси та сезонні квіти щодня. Замовляйте букет з доставкою за 2–3 години — Narciss Flowers.">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon.png" type="image/favicon">
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WTXTX78F');</script>
-<!-- End Google Tag Manager -->
-    
-    
-</head>
-<body>
-
-
-<header class="site-header">
-    <button class="menu-btn" id="menuBtn" aria-label="Відкрити меню">
-        <svg viewBox="0 0 40 40" width="36" height="36">
-            <path d="M8 12 H32 M8 20 H32 M8 28 H32" 
-                  stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-    </button>
-</header>
-
-<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <!-- Логотип по центру на всю ширину -->
-    <div class="mobile-menu-header">
-        <div class="mobile-logo centered">
-            <img src="images/logo2.png" alt="Narciss Flowers">
-        </div>
-    </div>
-
-
-    <ul class="mobile-menu-list">
-        <li data-delay="0"><a href="/">В початок</a></li>
-        <li data-delay="100"><a href="#reviews">Відгуки</a></li>
-        <li data-delay="200"><a href="#delivery">Доставка</a></li>
-        <li data-delay="300"><a href="#contacts">Контакти</a></li>
-    </ul>
-
-
-    <div class="mobile-menu-footer">
-        <div class="menu-contacts">
-            <a href="tel:+380505557878"><i class="fa fa-phone"></i> +38 050 555 78 78</a>
-            <a href="https://t.me/narcissflowers_dnipro"><i class="fab fa-telegram"></i> @narcissflowers_dnipro</a>
-            <a href="https://www.instagram.com/narcissflowers.dp/"><i class="fab fa-instagram"></i> @narcissflowers_dnipro</a>
-            <a href="https://wa.me/380505557878"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="viber://chat?number=%2B380505557878"><i class="fab fa-viber"></i> Viber</a>
-            <a href="https://www.google.com/maps/place/NARCISS+FLOWERS+доставка+свіжих+квітів+Дніпро/@48.453287,35.0214579,19z/data=!4m6!3m5!1s0x40dbe3936ca6d5b3:0xf739c6f070cf5e8d!8m2!3d48.4532861!4d35.0221016!16s%2Fg%2F11lz2vp0ys?authuser=1&entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fas fa-map-marker-alt"></i> На карті</a>
-        </div>
-    </div>
-</nav>
-
-
-<div class="overlay" id="overlay"></div>
-
-
-    <main>
-        <br><br>
-        <img src="images/logo2.png" alt="logo" class="logo-img">
-        <br>
-        <h1>Доставка свіжих квітів</h1>
-        <br>
-        <div class="socials">
-            <a href="tel:+380505557878" aria-label="Phone"><i class="fa fa-phone"></i></a>
-            <a href="https://t.me/narcissflowers_dnipro" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.instagram.com/narcissflowers.dp/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/380505557878" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="viber://chat?number=%2B380505557878" aria-label="Viber"><i class="fab fa-viber"></i></a>
-            <a href="https://www.google.com/maps/place/NARCISS+FLOWERS+доставка+свіжих+квітів+Дніпро/@48.453287,35.0214579,19z/data=!4m6!3m5!1s0x40dbe3936ca6d5b3:0xf739c6f070cf5e8d!8m2!3d48.4532861!4d35.0221016!16s%2Fg%2F11lz2vp0ys?authuser=1&entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" aria-label="Map"><i class="fas fa-map-marker-alt"></i></a>
-        </div>
-        <br>
-        <p id="reviews" class="follow">Квіти, що залишаються в серці</p>
-
-
-
-<section class="reviews-section mobile-only">
-            <div class="reviews-simple">
-<img src="images/review1.jpg" alt="Відгук 1">
-<img src="images/review2.jpg" alt="Відгук 2">
-<img src="images/review3.jpg" alt="Відгук 3">
-<img src="images/review4.jpg" alt="Відгук 4">
-<img src="images/review5.jpg" alt="Відгук 5">
-<img src="images/review6.jpg" alt="Відгук 6">
-<img src="images/review7.jpg" alt="Відгук 7">
-<img src="images/review8.jpg" alt="Відгук 8">
-<img src="images/review9.jpg" alt="Відгук 9">
-<img src="images/review10.jpg" alt="Відгук 10">
-<img src="images/review11.jpg" alt="Відгук 11">
-<img src="images/review12.jpg" alt="Відгук 12">
-<img src="images/review13.jpg" alt="Відгук 13">
-<img src="images/review14.jpg" alt="Відгук 14">
-<img src="images/review15.jpg" alt="Відгук 15">
-<img src="images/review16.jpg" alt="Відгук 16">
-<img src="images/review17.jpg" alt="Відгук 17">
-            </div>
-        </section>
-
-
-
-
-
-<section class="reviews-section desktop-only">
-
-
-
-    <div class="reviews-simple">
-    	<button class="review-nav review-prev">‹</button>
-    	<button class="review-nav review-next">›</button>
-
-
-        <div class="reviews-wrapper">
-<img src="images/review1.jpg" alt="Відгук 1">
-<img src="images/review2.jpg" alt="Відгук 2">
-<img src="images/review3.jpg" alt="Відгук 3">
-<img src="images/review4.jpg" alt="Відгук 4">
-<img src="images/review5.jpg" alt="Відгук 5">
-<img src="images/review6.jpg" alt="Відгук 6">
-<img src="images/review7.jpg" alt="Відгук 7">
-<img src="images/review8.jpg" alt="Відгук 8">
-<img src="images/review9.jpg" alt="Відгук 9">
-<img src="images/review10.jpg" alt="Відгук 10">
-<img src="images/review11.jpg" alt="Відгук 11">
-<img src="images/review12.jpg" alt="Відгук 12">
-<img src="images/review13.jpg" alt="Відгук 13">
-<img src="images/review14.jpg" alt="Відгук 14">
-<img src="images/review15.jpg" alt="Відгук 15">
-<img src="images/review16.jpg" alt="Відгук 16">
-<img src="images/review17.jpg" alt="Відгук 17">
-        </div>
-    </div>
-</section>
-
-
-
-
-<section id="delivery" class="delivery-section">
-    <div class="delivery-container">
-
-        <!-- 1. Безкоштовна доставка – букет у подарунковій коробці з стрічкою (найзрозуміліший і найгарніший варіант) -->
-        <div class="delivery-card" data-delay="0">
-            <div class="delivery-icon">
-                <svg viewBox="0 0 100 100" width="86" height="86" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" opacity="0.16" fill="none"/>
-                    <!-- коробка -->
-                    <rect x="34" y="44" width="32" height="28" rx="4" stroke="white" stroke-width="2" opacity="0.5" fill="none"/>
-                    <path d="M34 44h32" stroke="white" stroke-width="2" opacity="0.4"/>
-                    <!-- стрічка + бант -->
-                    <path d="M50 44v28m-12-16h24" stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M44 52l-6-6m18 6l6-6m-18 6l6 6m12-6l-6 6" stroke="#d4af37" stroke-width="2.4"/>
-                    <!-- букет виглядає зверху -->
-                    <path d="M50 28c-3-5-7-4-9-1-2 3 1 7 4 9 3 2 6-1 6-1s3-3 6-1c3 2 5-2 3-7-1-3-4-4-6-1" 
-                          fill="#d4af37" opacity="0.3" stroke="#d4af37" stroke-width="1.8"/>
-                </svg>
-            </div>
-            <h3>Безкоштовна доставка</h3>
-            <p>По Дніпру — від 1 999 ₴<br>В будь-який район. Швидко та дбайливо.</p>
-        </div>
-
-        <!-- 2. Цілодобово -->
-        <div class="delivery-card" data-delay="200">
-            <div class="delivery-icon">
-                <svg viewBox="0 0 100 100" width="86" height="86" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" opacity="0.16" fill="none"/>
-                    <circle cx="50" cy="50" r="30" stroke="white" stroke-width="1.6" opacity="0.3" fill="none"/>
-                    <path d="M50 20v28l16 10" stroke="#d4af37" stroke-width="3.2" stroke-linecap="round"/>
-                    <circle cx="50" cy="50" r="4" fill="#d4af37"/>
-                    <text x="50" y="78" text-anchor="middle" fill="#d4af37" font-size="12" font-weight="600">08:00 - 20:00</text>
-                </svg>
-            </div>
-            <h3>Надійно</h3>
-            <p>Працюємо 08:00 - 20:00<br>Без вихідних.</p>
-        </div>
-
-        <!-- 3. Доставимо вчасно -->
-        <div class="delivery-card" data-delay="300">
-            <div class="delivery-icon">
-                <svg viewBox="0 0 100 100" width="86" height="86" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" opacity="0.16" fill="none"/>
-                    <rect x="28" y="24" width="44" height="48" rx="6" stroke="white" stroke-width="2" opacity="0.5" fill="none"/>
-                    <path d="M36 18v12M64 18v12" stroke="white" stroke-width="2" opacity="0.6"/>
-                    <path d="M28 38h44" stroke="white" stroke-width="1.8" opacity="0.4"/>
-                    <path d="M38 50l8 8 16-16" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="50" cy="46" r="4" fill="#d4af37" opacity="0.3"/>
-                </svg>
-            </div>
-            <h3>Доставимо вчасно</h3>
-            <p>Точно у зазначений час<br>Запізнюватись — не про нас.</p>
-        </div>
-
-        <!-- 4. Фото-звіт -->
-        <div class="delivery-card" data-delay="400">
-            <div class="delivery-icon">
-                <svg viewBox="0 0 100 100" width="86" height="86" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" opacity="0.16" fill="none"/>
-                    <rect x="34" y="22" width="32" height="46" rx="6" stroke="white" stroke-width="2" opacity="0.6" fill="none"/>
-                    <circle cx="50" cy="64" r="3" fill="#d4af37"/>
-                    <rect x="38" y="28" width="24" height="18" rx="2" fill="none" stroke="#d4af37" stroke-width="1.5"/>
-                    <path d="M50 32v8m-6-4l12 0" stroke="#d4af37" stroke-width="2"/>
-                    <circle cx="50" cy="38" r="5" fill="#d4af37" opacity="0.35"/>
-                </svg>
-            </div>
-            <h3>Фото-звіт</h3>
-            <p>Покажемо букет перед відправкою<br>Тільки після вашого «ок» — у дорогу.</p>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-<!-- ===== КОНТАКТИ ===== -->
-<section id="contacts" class="contacts-section">
-    <div class="contacts-container">
-        
-        <h2 class="contacts-title">Зв’язатися з Narciss Flowers</h2>
-        
-        <div class="contacts-grid">
-            
-            <div class="contact-item" data-delay="0">
-                <span class="contact-label">Телефон / Viber / WhatsApp</span>
-                <a href="tel:+380505557878" class="contact-value">+38 050 555 78 78</a>
-            </div>
-            
-            <div class="contact-item" data-delay="200">
-                <span class="contact-label">Telegram</span>
-                <a href="https://t.me/narcissflowers_dnipro" class="contact-value">@narcissflowers_dnipro</a>
-            </div>
-            
-            <div class="contact-item" data-delay="400">
-                <span class="contact-label">Instagram</span>
-                <a href="https://www.instagram.com/narcissflowers.dp/" class="contact-value">@narcissflowers_dnipro</a>
-            </div>
-            
-            <div class="contact-item" data-delay="600">
-                <span class="contact-label">Ми на карті</span>
-                <a href="https://www.google.com/maps/place/NARCISS+FLOWERS+доставка+свіжих+квітів+Дніпро/@48.453287,35.0214579,19z/data=!4m6!3m5!1s0x40dbe3936ca6d5b3:0xf739c6f070cf5e8d!8m2!3d48.4532861!4d35.0221016!16s%2Fg%2F11lz2vp0ys" 
-                   class="contact-value contact-map" target="_blank">
-                   Дніпро, вул. Олександра Поля 48а
-                </a>
-            </div>
-            
-<br>
-            
-        </div>
-            <div class="contact-item" data-delay="800">
-                <span class="contact-label">Режим роботи</span>
-                <div class="contact-value">08:00 - 20:00 · Без вихідних</div>
-            </div>
-    </div>
-</section>
-
-
-<br><br>
-
-<footer class="site-footer">
-    <div class="footer-container">
-
-        <div class="footer-copyright">
-            © 2025 Narciss Flowers.<br>
-            Всі права захищені.
-        </div>
-
-        <button onclick="scrollToTop()" class="to-top-btn" aria-label="Прокрутити наверх">
-            <svg viewBox="0 0 56 56" width="56" height="56">
-                <circle cx="28" cy="28" r="26" fill="#0f2421" stroke="#d4af37" stroke-width="1.8"/>
-                <path d="M28 36 L28 20 M20 28 L28 20 L36 28"
-                      stroke="#d4af37" stroke-width="3.2" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-
-    </div>
-</footer>
-
-    </main>
-
-
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTXTX78F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-    
-
-<script>
-const menuBtn    = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const overlay    = document.getElementById('overlay');
-
-function closeMobileMenu() {
-mobileMenu.classList.remove('active');
-overlay.classList.remove('active');
+:root {
+    --bg: #0b2d2a;
+    --gold: #d4af37;
+    --gold-light: #e6c567;
 }
 
-menuBtn.addEventListener('click', () => {
-mobileMenu.classList.toggle('active');
-overlay.classList.toggle('active');
-});
 
-overlay.addEventListener('click', closeMobileMenu);
-
-mobileMenu.addEventListener('click', (e) => {
-if (e.target.closest('a')) {
-closeMobileMenu();
+a, a:hover, a:active, a:focus, a:visited {
+    color: inherit !important;
+    text-decoration: none !important;
 }
-});
-</script>
+
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html, body { 
+    overflow-x: hidden !important; 
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--bg);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 20px 22px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10001;
+    pointer-events: none;
+}
+
+
+.menu-btn {
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s ease;
+}
+
+.menu-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.menu-btn svg path {
+    stroke: #d4af37;
+    stroke-width: 2.4;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
 
 
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.delivery-card');
+
+
+.mobile-menu {
+    position: fixed !important;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    max-width: 420px;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2421 0%, #0b1e1b 100%);
+    z-index: 9999;
+    transition: left 0.7s cubic-bezier(0.77, 0, 0.18, 1);
+    overflow-y: auto;
+    box-shadow: 12px 0 60px rgba(0,0,0,0.7);
+    contain: layout style;
+}
+.mobile-menu.active { left: 0; }
+
+
+.mobile-menu-header {
+    padding: 50px 30px 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+.mobile-logo.centered img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.mobile-menu.active .mobile-logo.centered img {
+    animation: logoWelcome 1.3s ease-out;
+}
+@keyframes logoWelcome {
+    0%   { transform: scale(0.88); opacity: 0; }
+    70%  { transform: scale(1.06); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Пункты меню */
+.mobile-menu-list {
+    padding: 20px 40px;
+    list-style: disc;
+    padding-left: 60px;
+}
+
+.mobile-menu-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+    margin: 12px 0;
+}
+
+
+.mobile-menu-list li::marker {
+    color: #d4af37;
+}
+
+.mobile-menu.active .mobile-menu-list li {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(0.12s + var(--delay, 0) * 1ms);
+}
+
+.mobile-menu-list a {
+    color: #d4af37;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: block;
+    padding: 6px 0;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu-list a:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.mobile-menu-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1.8px;
+    background: #d4af37;
+    transition: width 0.5s ease;
+}
+
+.mobile-menu-list a:hover::after {
+    width: 60px;
+}
+
+
+
+
+
+
+.mobile-menu-footer {
+    padding: 20px 40px 40px;
+    border-top: 1px solid rgba(212,175,55,0.15);
+}
+.menu-contacts a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #ccc;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 18px 0;
+    transition: all 0.4s ease;
+}
+.menu-contacts i {
+    font-size: 24px;
+    color: #d4af37;
+    width: 30px;
+    text-align: center;
+}
+.menu-contacts a:hover {
+    color: white;
+    transform: translateX(8px);
+}
+.menu-contacts a:hover i {
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.86);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.45s ease;
+    z-index: 9998;
+    backdrop-filter: blur(6px);
+}
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 10px 10px;
+}
+
+.logo-img {
+    width: 320px;
+    margin-bottom: 20px;
+    transform-origin: center top;
+}
+
+h1 {
+    font-size: 30px;
+    color: #d4af37;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.follow {
+    font-size: 21px;
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.socials a {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--gold);
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+        letter-spacing: 20px;
+    }
+
+    .logo-img {
+        width: 580px;
+        margin-bottom: 60px;
+    }
+
+    .follow {
+        font-size: 28px;
+    }
+
+    .socials a {
+        font-size: 36px;
+        margin: 0 25px;
+    }
+
+    main {
+        padding: 0 40px;
+    }
+}
+
+
+
+
+
+/* По умолчанию — мобильная версия активна */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* ================================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ================================================================ */
+
+.mobile-only .reviews-simple {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    background: #0b2d2a;
+    width: 100vw;
+    max-width: 100vw;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.mobile-only .reviews-simple::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-only .reviews-simple img {
+    height: 520px;
+    width: auto;
+    max-width: 88vw;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: white;
+    border-radius: 26px;
+    scroll-snap-align: start;
+}
+
+
+
+/* ================================================================
+   ДЕСКТОП — С 768PX И ВЫШЕ
+   ================================================================ */
+
+@media (min-width: 768px) {
+
+    .mobile-only {
+        display: none !important;
+    }
+
+    .desktop-only {
+        display: block !important;
+    }
+
+
+    .reviews-section {
+        position: relative;
+        width: 100%;
+    }
+
+
+    .desktop-only .reviews-simple {
+        position: relative;
+        overflow: hidden;
+
+        max-width: 1600px;
+        margin: 0 auto;
+
+        padding-left: clamp(24px, 5vw, 80px);
+        padding-right: clamp(24px, 5vw, 80px);
+    }
+
+
+    .desktop-only .reviews-simple::before,
+    .desktop-only .reviews-simple::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: clamp(60px, 10vw, 140px);
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .desktop-only .reviews-simple::before {
+        left: 0;
+        background: linear-gradient(to right, #0b2d2a 40%, transparent 100%);
+    }
+
+    .desktop-only .reviews-simple::after {
+        right: 0;
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const delay = entry.target.dataset.delay || 0;
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, delay);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    cards.forEach(card => observer.observe(card));
-});
-</script>
+    }
 
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('.contact-item');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('visible'), entry.target.dataset.delay || 0);
-            }
-        });
-    }, { threshold: 0.3 });
-    items.forEach(item => observer.observe(item));
-});
-</script>
+    .desktop-only .reviews-wrapper {
+        display: flex;
+        gap: 36px;
+        transition: transform 0.8s cubic-bezier(0.77, 0, 0.18, 1);
+        will-change: transform;
+    }
+
+    .desktop-only img {
+        height: 550px;
+        width: auto;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 28px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        transition: all 0.7s ease;
+    }
+
+    .desktop-only img:hover {
+        transform: translateY(-20px);
+        box-shadow:
+            0 50px 100px rgba(0,0,0,0.6),
+            0 0 0 4px rgba(212,175,55,0.25);
+    }
+
+    .review-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        width: clamp(48px, 4vw, 64px);
+        height: clamp(48px, 4vw, 64px);
+
+        background: rgba(11, 45, 42, 0.92);
+        border: 2px solid #d4af37;
+        border-radius: 50%;
+        color: #d4af37;
+
+        font-size: clamp(22px, 3vw, 32px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        transition: all 0.35s ease;
+        backdrop-filter: blur(6px);
+    }
+
+    .review-nav:hover {
+        background: #d4af37;
+        color: #0b2d2a;
+        transform: translateY(-50%) scale(1.15);
+        box-shadow: 0 0 30px rgba(212,175,55,0.4);
+    }
 
 
-<script>
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
+    .review-prev {
+        left: max(12px, calc((100vw - 1600px) / 2));
+    }
+
+    .review-next {
+        right: max(12px, calc((100vw - 1600px) / 2));
+    }
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const wrapper = document.querySelector(".desktop-only .reviews-wrapper");
-    if (!wrapper) return;
-
-    const prev = document.querySelector(".review-prev");
-    const next = document.querySelector(".review-next");
-
-    let index = 0;
-    const cardsVisible = 3; // сколько карточек видно одновременно
-    const totalCards = wrapper.children.length;
-
-    const updateCarousel = () => {
-        const cardWidth = wrapper.children[0].getBoundingClientRect().width + 36; // ширина + gap
-        wrapper.style.transform = `translateX(-${index * cardWidth}px)`;
-    };
-
-    next.onclick = () => {
-        if (index < totalCards - cardsVisible) {
-            index++;
-        } else {
-            index = 0; // зацикливаем
+    @media (max-width: 1100px) {
+        .review-prev {
+            left: 12px;
         }
-        updateCarousel();
-    };
-
-    prev.onclick = () => {
-        if (index > 0) {
-            index--;
-        } else {
-            index = totalCards - cardsVisible; // зацикливаем назад
+        .review-next {
+            right: 12px;
         }
-        updateCarousel();
-    };
 
-    // Пересчёт при ресайзе
-    window.addEventListener("resize", () => {
-        index = Math.min(index, totalCards - cardsVisible);
-        updateCarousel();
-    });
-
-    // Инициализация
-    updateCarousel();
-});
-</script>
-
-
-</body>
-
-</html>
+        .review-nav {
+            width: 52px;
+            height: 52px;
+            font-size: 26px;
+        }
+    }
+}
 
 
 
 
+
+
+
+
+
+
+
+.delivery-section {
+    padding: 30px 20px;
+    background: var(--bg);
+}
+
+.delivery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.delivery-card {
+    flex: 1 1 180px;
+    max-width: 320px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.delivery-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delivery-icon {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 28px;
+}
+
+.delivery-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.delivery-icon .bg-circle {
+    stroke: white;
+    stroke-width: 1;
+    opacity: 0.18;
+    fill: none;
+}
+
+/* лёгкое свечение при появлении */
+.delivery-card.visible .delivery-icon svg {
+    animation: iconPulse 1.6s ease-out forwards;
+}
+
+@keyframes iconPulse {
+    0%   { opacity: 0; transform: scale(0.8); }
+    60%  { filter: drop-shadow(0 0 20px #d4af3770); }
+    100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+}
+
+.delivery-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.delivery-card h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #d4af37;
+    margin: 14px auto 0;
+    border-radius: 1px;
+}
+
+.delivery-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c8c8c8;
+}
+
+/* Десктоп */
+@media (min-width: 768px) {
+    .delivery-section { padding: 70px 40px; }
+    .delivery-icon { width: 96px; height: 96px; margin-bottom: 32px; }
+    .delivery-card h3 { font-size: 28px; }
+    .delivery-card p { font-size: 17px; }
+}
+
+
+
+
+
+
+
+    /* ==================== КОНТАКТЫ ==================== */
+    .contacts-section {
+        background: var(--bg);
+        text-align: center;
+    }
+
+    .contacts-title {
+        font-size: 32px;
+        color: var(--gold);
+        margin-bottom: 70px;
+        letter-spacing: 4px;
+        position: relative;
+    }
+
+    .contacts-title::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 2px;
+        background: var(--gold);
+    }
+
+    .contacts-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+        .contacts-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 80px;
+        }
+    }
+
+.contact-item {
+    opacity: 0;
+}
+
+
+.contact-item.visible {
+    animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    .contact-label {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: var(--gold-light);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .contact-value {
+        display: block;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.4s ease;
+    }
+
+    .contact-value:hover {
+        color: var(--gold);
+    }
+
+    .contact-map {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    /* Десктоп */
+    @media (min-width: 768px) {
+        .contacts-title { font-size: 40px; margin-bottom: 90px; }
+        .contact-label { font-size: 15px; }
+        .contact-value { font-size: 28px; }
+        .contact-map { font-size: 22px; }
+    }
+
+
+
+.site-footer {
+
+    padding: 20px 20px;
+
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                
+}
+
+
+.footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+
+.to-top-btn {
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    flex-shrink: 0;
+}
+
+.to-top-btn:hover {
+    transform: translateY(-8px) scale(1.1);
+}
+
+
+@media (max-width: 640px) {
+    .footer-container {
+        text-align: center;
+        gap: 24px;
+    }
+    .to-top-btn {
+        order: 1;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .site-footer { padding: 70px 40px; }
+    .footer-copyright { font-size: 15px; }
+    .to-top-btn svg { width: 64px; height: 64px; }
+}
+
+
+
+
+
+
+
+
+
+.promo-section {
+    background: var(--bg);
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.promo-container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.promo-card {
+    background: linear-gradient(135deg, #0f2421 0%, #0b1e1b 100%);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 24px;
+    padding: 50px 30px;
+    position: relative;
+    box-shadow: 
+        0 20px 50px rgba(0,0,0,0.6),
+        inset 0 0 40px rgba(212,175,55,0.06);
+    overflow: hidden;
+}
+
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.15) 0%, transparent 60%);
+    animation: gentle-rotate 30s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes gentle-rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.promo-sparkle {
+    font-size: 40px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.promo-title {
+    font-size: 36px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    margin: 0 0 12px;
+    font-weight: 400;
+}
+
+.promo-subtitle {
+    font-size: 18px;
+    color: #c8c8c8;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+}
+
+.promo-code-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(212,175,55,0.08);
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 50px;
+    padding: 16px 40px;
+    margin: 0 auto 24px;
+    min-width: 280px;
+    max-width: 90%;
+}
+
+.promo-code-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 6px;
+}
+
+.promo-code {
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.promo-discount {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promo-copy-btn {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-size: 17px;
+    padding: 14px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    min-width: 220px;
+}
+
+.promo-copy-btn:hover {
+    background: var(--gold);
+    color: #0b2d2a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(212,175,55,0.35);
+}
+
+.promo-note {
+    margin-top: 28px;
+    font-size: 14px;
+    color: #aaa;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .promo-section {
+        padding: 50px 15px;
+    }
+    
+    .promo-card {
+        padding: 40px 20px;
+    }
+    
+    .promo-title {
+        font-size: 28px;
+    }
+    
+    .promo-code-wrapper {
+        padding: 14px 30px;
+        min-width: 240px;
+    }
+    
+    .promo-code {
+        font-size: 36px;
+    }
+    
+    .promo-discount {
+        font-size: 18px;
+    }
+    
+    .promo-copy-btn {
+        padding: 12px 40px;
+        font-size: 16px;
+        min-width: 200px;
+    }
+}

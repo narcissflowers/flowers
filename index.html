@@ -445,12 +445,36 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<script>
+document.querySelector('.promo-copy-btn').addEventListener('click', async function() {
+    const code = 'GIFTS5';  // або document.querySelector('.promo-code').textContent.trim();
 
+    try {
+        await navigator.clipboard.writeText(code);
+        
+        // Візуальний фідбек — дуже важливо!
+        this.textContent = 'Скопійовано! ✓';
+        this.style.backgroundColor = '#4caf50';
+        this.style.color = 'white';
+        
+        setTimeout(() => {
+            this.textContent = 'Скопіювати код';
+            this.style.backgroundColor = '';  // повернути початковий стиль
+            this.style.color = '';
+        }, 2000);
+        
+    } catch (err) {
+        console.error('Не вдалося скопіювати: ', err);
+        alert('Не вдалося скопіювати. Скопіюй вручну: ' + code);
+    }
+});
+</script>
 
 
 </body>
 
 </html>
+
 
 
 

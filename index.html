@@ -473,6 +473,148 @@ document.querySelector('.promo-copy-btn').addEventListener('click', async functi
 </script>
 
 
+
+<!-- =========================================================
+     OLD SITE -> APPS SCRIPT -> OLD TELEGRAM BOT ATTRIBUTION
+     Captures GA4 client_id + session_id before opening Telegram.
+     The original t.me links remain in HTML as a fallback.
+========================================================== -->
+<script>
+(() => {
+    const GA4_ID = 'G-YBNT69CB4N';
+
+    const APPS_SCRIPT_URL =
+        'https://script.google.com/macros/s/AKfycbyQErsBNpQe_ddJFgsBCxAxVkY_zFhvk5usy9m3gAspn3hkBCDYV1eMXKtyoYjFyBpIGg/exec';
+
+    const OLD_BOT_LINK_PART = 't.me/Narciss_flowers_robot_bot';
+
+    function ensureGtag() {
+        window.dataLayer = window.dataLayer || [];
+
+        if (typeof window.gtag !== 'function') {
+            window.gtag = function () {
+                window.dataLayer.push(arguments);
+            };
+        }
+    }
+
+    function getGa4Value(field) {
+        return new Promise((resolve) => {
+            ensureGtag();
+
+            let finished = false;
+
+            const finish = (value = '') => {
+                if (finished) {
+                    return;
+                }
+
+                finished = true;
+                clearTimeout(timer);
+
+                resolve(
+                    value == null
+                        ? ''
+                        : String(value).trim()
+                );
+            };
+
+            const timer = window.setTimeout(
+                () => finish(''),
+                2000
+            );
+
+            try {
+                window.gtag(
+                    'get',
+                    GA4_ID,
+                    field,
+                    (value) => finish(value)
+                );
+            } catch (error) {
+                finish('');
+            }
+        });
+    }
+
+    async function openOldTelegramBotWithAttribution(event) {
+        const link = event.currentTarget;
+
+        if (link.dataset.telegramAttributionBusy === '1') {
+            event.preventDefault();
+            return;
+        }
+
+        event.preventDefault();
+        link.dataset.telegramAttributionBusy = '1';
+
+        const originalUrl = link.href;
+
+        try {
+            const [clientId, sessionId] = await Promise.all([
+                getGa4Value('client_id'),
+                getGa4Value('session_id')
+            ]);
+
+            const params = new URLSearchParams();
+
+            if (clientId) {
+                params.set('cid', clientId);
+            }
+
+            if (sessionId) {
+                params.set('sid', sessionId);
+            }
+
+            params.set(
+                'source',
+                'site_telegram_click'
+            );
+
+            window.location.href =
+                APPS_SCRIPT_URL +
+                '?' +
+                params.toString();
+        } catch (error) {
+            window.location.href = originalUrl;
+        } finally {
+            window.setTimeout(() => {
+                delete link.dataset.telegramAttributionBusy;
+            }, 3000);
+        }
+    }
+
+    function bindOldTelegramLinks() {
+        document
+            .querySelectorAll(
+                `a[href*="${OLD_BOT_LINK_PART}"]`
+            )
+            .forEach((link) => {
+                if (link.dataset.telegramAttributionBound === '1') {
+                    return;
+                }
+
+                link.dataset.telegramAttributionBound = '1';
+
+                link.addEventListener(
+                    'click',
+                    openOldTelegramBotWithAttribution
+                );
+            });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener(
+            'DOMContentLoaded',
+            bindOldTelegramLinks,
+            { once: true }
+        );
+    } else {
+        bindOldTelegramLinks();
+    }
+})();
+</script>
+
 </body>
 
 </html>
